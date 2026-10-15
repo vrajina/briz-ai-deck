@@ -1,0 +1,131 @@
+---
+export interface Props {
+  totalSlides?: number;
+}
+
+const slideTitles = [
+  '1. Титул',
+  '2. Точки потерь',
+  '3. ИИ-агент',
+  '4. Диалог в 23:40',
+  '5. Несезон',
+  '6. Тарифы',
+  '7. Окупаемость',
+  '8. Сроки запуска',
+];
+---
+
+<footer class="footer-briz">
+  <div class="keyboard-hint">
+    <span>Навигация</span>
+    <kbd>←</kbd>
+    <kbd>→</kbd>
+    <span class="hint-sep">·</span>
+    <span>колесо мыши</span>
+  </div>
+
+  <div class="slide-tabs">
+    {slideTitles.map((title, idx) => (
+      <button class={`tab-btn ${idx === 0 ? 'active' : ''}`} data-slide={idx}>
+        {title}
+      </button>
+    ))}
+  </div>
+
+  <div class="copyright">
+    БАЗА ОТДЫХА «БРИЗ» · САМАРА, ВОЛГА · 2026
+  </div>
+</footer>
+
+<style>
+  .footer-briz {
+    position: relative;
+    z-index: 10;
+    height: 46px;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-top: 1px solid var(--border-color, #d6d0c4);
+    font-size: 0.74rem;
+    box-shadow: 0 -1px 0 rgba(18, 24, 23, 0.02);
+  }
+
+  .keyboard-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    color: var(--text-light, #7e8c89);
+    font-size: 0.7rem;
+  }
+
+  .keyboard-hint kbd {
+    background: var(--bg-card-alt, #ece8df);
+    border: 1px solid var(--border-color, #d6d0c4);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 0.68rem;
+    color: var(--text-main, #121817);
+    font-weight: 600;
+  }
+
+  .hint-sep {
+    color: var(--border-color, #d6d0c4);
+  }
+
+  .slide-tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .tab-btn {
+    background: transparent;
+    border: none;
+    font-family: var(--font-title);
+    font-size: 0.73rem;
+    font-weight: 500;
+    color: var(--text-muted, #54605e);
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .tab-btn:hover {
+    background: var(--bg-card-alt, #ece8df);
+    color: var(--text-main, #121817);
+  }
+
+  .tab-btn.active {
+    background: var(--text-main, #121817);
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .copyright {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-light, #7e8c89);
+    letter-spacing: 0.06em;
+  }
+
+  @media (max-width: 1024px) {
+    .slide-tabs {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-briz {
+      padding: 0 1rem;
+      justify-content: center;
+    }
+    .keyboard-hint {
+      display: none;
+    }
+  }
+</style>

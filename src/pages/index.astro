@@ -1,413 +1,612 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/briz-editorial.css';
 ---
 
-<Layout title="ИИ-трансформация базы отдыха «Бриз» | Презентация">
-  <div id="deck" class="w-full max-w-6xl h-full flex items-center justify-center relative">
-    
-    <!-- SLIDE 1: COVER / TITLE -->
-    <div class="slide-item active w-full flex-col items-center justify-center text-center px-4">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-nature-sand/10 border border-nature-sand/20 text-nature-sand text-xs font-medium uppercase tracking-wider mb-6">
-        <span class="w-2 h-2 rounded-full bg-nature-terracotta"></span>
-        Концепция для руководства briz.club
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>База отдыха «Бриз»&nbsp;— ИИ-трансформация и&nbsp;автопродажи</title>
+  <meta name="description" content="Коммерческое предложение: Внедрение ИИ-консьержа, автопродажи коттеджей 24/7 и загрузка базы отдыха «Бриз» в несезон" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+</head>
+<body>
+  <div class="deck-container">
+    <Header totalSlides={8} />
+
+    <!-- 01 TITLE SLIDE -->
+    <section class="slide active slide-title-bg" data-slide="0">
+      <div class="title-bg-image-wrapper">
+        <img
+          src="https://static.tildacdn.com/tild6633-3437-4630-b061-613037623365/__copy.jpg"
+          alt="База отдыха Бриз на Волге"
+          class="title-bg-img"
+        />
+        <div class="title-bg-overlay"></div>
       </div>
-
-      <div class="mb-6 flex justify-center">
-        <div class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 p-3 flex items-center justify-center text-nature-sand">
-          <img src="/logo-current.svg" alt="Логотип Бриз" class="w-full h-full object-contain brightness-200" />
-        </div>
-      </div>
-
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mb-6">
-        Умный консьерж и автопродажи <br />
-        <span class="text-nature-sand font-serif italic font-normal">для базы отдыха «Бриз»</span>
-      </h1>
-
-      <p class="text-sm sm:text-lg text-nature-muted max-w-2xl mx-auto leading-relaxed mb-8">
-        Как закрывать 100% ночных броней, привлекать гостей в пустующий несезон и растить средний чек без расширения штата администраторов.
-      </p>
-
-      <div class="flex flex-wrap items-center justify-center gap-3 text-xs text-nature-sand font-mono mb-8">
-        <span class="px-3.5 py-1.5 rounded-lg bg-nature-surface border border-nature-border">📍 Самара, берег Волги</span>
-        <span class="px-3.5 py-1.5 rounded-lg bg-nature-surface border border-nature-border">🏡 Коттеджи Барн Хаус 70 и 130 м²</span>
-        <span class="px-3.5 py-1.5 rounded-lg bg-nature-surface border border-nature-border">♨️ Чан Фурако & Баня</span>
-        <span class="px-3.5 py-1.5 rounded-lg bg-nature-surface border border-nature-border">⚡ TravelLine модуль</span>
-      </div>
-
-      <div class="text-xs text-nature-muted">
-        Нажимайте <kbd class="px-2 py-0.5 rounded bg-white/10 text-white font-mono">Далее →</kbd> или стрелки на клавиатуре для перехода по слайдам
-      </div>
-    </div>
-
-    <!-- SLIDE 2: PAIN POINTS & LOSSES -->
-    <div class="slide-item w-full flex-col justify-center px-4">
-      <div class="mb-6 text-center sm:text-left">
-        <span class="text-xs font-mono text-nature-terracotta uppercase tracking-wider">Текущая ситуация</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Где турбаза теряет брони и выручку?</h2>
-        <p class="text-xs sm:text-sm text-nature-muted mt-1">Анализ обращений на загородный отдых в Самарской области выявил 4 ключевые проблемы:</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-5xl">
-        <div class="nature-card rounded-2xl p-5 border-l-4 border-l-nature-terracotta">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-lg font-bold text-white">1. Ночные заявки (38% лидов)</span>
-            <span class="text-xs text-nature-terracotta font-mono font-bold">Слив клиентов</span>
-          </div>
-          <p class="text-xs text-nature-muted leading-relaxed">
-            Семьи и пары ищут домики с 21:00 до 01:00. Администраторы в это время спят или заняты. Ожидание ответа больше 15 минут уводит гостя на соседние турбазы.
-          </p>
+      <div class="slide-content title-slide-content">
+        <div class="briz-pill briz-pill-light">
+          КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ ДЛЯ РУКОВОДСТВА BRIZ.CLUB
         </div>
 
-        <div class="nature-card rounded-2xl p-5 border-l-4 border-l-nature-sand">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-lg font-bold text-white">2. Пустые будни в несезон</span>
-            <span class="text-xs text-nature-sand font-mono font-bold">Простой коттеджей</span>
-          </div>
-          <p class="text-xs text-nature-muted leading-relaxed">
-            Летом волжский пляж продает сам себя. С октября по апрель коттеджи простаивают с понедельника по четверг, пока постоянные расходы на тепло и охрану капают.
-          </p>
-        </div>
-
-        <div class="nature-card rounded-2xl p-5 border-l-4 border-l-nature-muted">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-lg font-bold text-white">3. Забытые допродажи</span>
-            <span class="text-xs text-nature-muted font-mono font-bold">-25% к чеку</span>
-          </div>
-          <p class="text-xs text-nature-muted leading-relaxed">
-            При потоке рутинных вопросов («как доехать?», «где Wi-Fi?») администраторы устают и просто забывают предложить чан Фурако (+5 000 ₽) или баню к заезду.
-          </p>
-        </div>
-
-        <div class="nature-card rounded-2xl p-5 border-l-4 border-l-emerald-600">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-lg font-bold text-white">4. Молчание на картах</span>
-            <span class="text-xs text-emerald-400 font-mono font-bold">Яндекс & 2ГИС</span>
-          </div>
-          <p class="text-xs text-nature-muted leading-relaxed">
-            Более 60% аудитории выбирают базы отдыха через карты. Отзывы без быстрых и развернутых ответов снижают позицию турбазы «Бриз» в поисковой выдаче.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 3: SOLUTION ARCHITECTURE -->
-    <div class="slide-item w-full flex-col justify-center px-4">
-      <div class="mb-6 text-center sm:text-left">
-        <span class="text-xs font-mono text-nature-terracotta uppercase tracking-wider">Интеллектуальная система</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Единый умный агент базы «Бриз»</h2>
-        <p class="text-xs sm:text-sm text-nature-muted mt-1">Оцифрованный мозг турбазы, работающий одновременно во всех каналах 24/7</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mb-5">
-        <div class="nature-card rounded-2xl p-5 border border-white/5">
-          <div class="w-8 h-8 rounded-lg bg-nature-sand/10 text-nature-sand font-bold text-xs flex items-center justify-center mb-3">01</div>
-          <h3 class="text-base font-bold text-white mb-2">База знаний «Бриз»</h3>
-          <p class="text-xs text-nature-muted leading-relaxed mb-3">
-            Хранит 100% данных объекта: планировки Барн-70 и 130, правила dog-friendly, цены, протокол растопки чана Фурако, меню кафе и схему проезда.
-          </p>
-          <span class="text-[11px] font-mono text-nature-sand">Никаких выдумок</span>
-        </div>
-
-        <div class="nature-card rounded-2xl p-5 border border-nature-terracotta/40 bg-nature-surface">
-          <div class="w-8 h-8 rounded-lg bg-nature-terracotta text-white font-bold text-xs flex items-center justify-center mb-3">02</div>
-          <h3 class="text-base font-bold text-white mb-2">Умный Консьерж</h3>
-          <p class="text-xs text-nature-muted leading-relaxed mb-3">
-            Ведет диалог живым языком гостеприимства. Мгновенно подбирает подходящий дом под состав семьи и ненавязчиво допродает чан, баню и романтик-пакеты.
-          </p>
-          <span class="text-[11px] font-mono text-nature-terracotta">Скрипты допродаж</span>
-        </div>
-
-        <div class="nature-card rounded-2xl p-5 border border-white/5">
-          <div class="w-8 h-8 rounded-lg bg-nature-sand/10 text-nature-sand font-bold text-xs flex items-center justify-center mb-3">03</div>
-          <h3 class="text-base font-bold text-white mb-2">Омниканальность</h3>
-          <p class="text-xs text-nature-muted leading-relaxed mb-3">
-            Работает на сайте briz.club, в Telegram-боте и в группе ВКонтакте. Напрямую формирует ссылку в <strong>TravelLine</strong> и сигнализирует админу в TG.
-          </p>
-          <span class="text-[11px] font-mono text-emerald-400">Сайт + TG + VK</span>
-        </div>
-      </div>
-
-      <!-- Tech note for owner -->
-      <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3 text-xs text-nature-muted max-w-5xl">
-        <span class="text-nature-sand font-bold">ℹ️ Технологии:</span>
-        <span>В основе — современные модели <strong>DeepSeek / Qwen</strong>: мгновенный ответ за 1 секунду на естественном русском языке, максимальная надежность и в разы более экономичное обслуживание, чем у западных аналогов.</span>
-      </div>
-    </div>
-
-    <!-- SLIDE 4: LIVE CASE (DIALOGUE) -->
-    <div class="slide-item w-full flex-col justify-center px-4">
-      <div class="mb-4 text-center sm:text-left">
-        <span class="text-xs font-mono text-nature-terracotta uppercase tracking-wider">Живой пример диалога</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Как ИИ закрывает бронь и делает Upsell в 23:40</h2>
-      </div>
-
-      <div class="nature-card rounded-2xl p-5 max-w-3xl mx-auto border border-white/10 space-y-3.5 text-xs">
-        <div class="flex items-center justify-between pb-2 border-b border-white/5 text-[11px] text-nature-muted font-mono">
-          <span>Гость (с сайта или Telegram)</span>
-          <span>Суббота, 23:40</span>
-        </div>
-
-        <!-- Guest -->
-        <div class="flex justify-end">
-          <div class="bg-white/10 rounded-xl rounded-tr-none px-4 py-2.5 max-w-[85%] text-white">
-            Здравствуйте! Хотим приехать в следующие выходные вдвоем, но у нас шпиц 3 кг. Есть свободный коттедж с красивым видом на горы?
+        <div style="display: flex; align-items: center; gap: 1.5rem; margin: 0.5rem 0 1rem;">
+          <!-- Large White Logo -->
+          <div style="width: 130px; height: 110px; display: flex; align-items: center; justify-content: center;">
+            <img src="/logo-white.svg" alt="Логотип Бриз" style="width: 100%; height: 100%; object-fit: contain;" />
           </div>
         </div>
 
-        <!-- AI -->
-        <div class="flex justify-start">
-          <div class="bg-nature-surface border border-nature-terracotta/30 rounded-xl rounded-tl-none px-4 py-3 max-w-[90%] text-nature-text leading-relaxed">
-            <p class="mb-2">
-              Здравствуйте! С радостью примем вас с питомцем 🐾 Мы в «Бризе» dog-friendly, шпицу у нас на волжском берегу точно понравится!
-            </p>
-            <p class="mb-2">
-              Для отдыха вдвоем идеально подойдет наш коттедж <strong class="text-white">«Барн Хаус-70»</strong>: панорамные окна прямо на Жигулевские горы, камин в гостиной и личная мангальная зона.
-            </p>
-            <div class="p-2.5 rounded-lg bg-black/40 border border-nature-terracotta/20 my-2 text-nature-sand">
-              ♨️ <strong>Рекомендуем к заезду:</strong> многие гости бронируют горячий <strong class="text-white">чан Фурако</strong> под звездами (5 000 ₽). Подготовить его к вашему приезду с хвойными веточками и волжским травяным чаем?
-            </div>
-            <p class="text-[11px] text-nature-muted">
-              Стоимость коттеджа — 8 000 ₽/сутки. Забронировать за вами Барн-70 на 24–26 ноября?
-            </p>
-          </div>
-        </div>
-
-        <!-- Guest -->
-        <div class="flex justify-end">
-          <div class="bg-white/10 rounded-xl rounded-tr-none px-4 py-2 max-w-[80%] text-white">
-            Да, чан обязательно растопите к 19:00! Давайте ссылку на оплату.
-          </div>
-        </div>
-
-        <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[11px] text-nature-muted">
-          <span class="text-emerald-400 font-semibold">✔ Сделка закрыта за 1.5 минуты</span>
-          <span class="text-nature-sand font-bold">Допродажа чана: +5 000 ₽ к чеку</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 5: OFF-SEASON STRATEGY -->
-    <div class="slide-item w-full flex-col justify-center px-4">
-      <div class="mb-6 text-center sm:text-left">
-        <span class="text-xs font-mono text-nature-terracotta uppercase tracking-wider">Загрузка с ноября по апрель</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Как привлекать гостей не в сезон без больших бюджетов</h2>
-        <p class="text-xs sm:text-sm text-nature-muted mt-1">В несезон мы продаем не просто квадратные метры, а эмоциональные сценарии отдыха:</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl">
-        <div class="nature-card rounded-2xl p-5 border border-white/5">
-          <div class="text-2xl mb-2">♨️</div>
-          <h3 class="text-base font-bold text-white mb-2">«Чан Фурако в мороз»</h3>
-          <p class="text-xs text-nature-muted leading-relaxed mb-4">
-            Главный вирусный оффер для пар. Пар над горячей водой, снег, вид на Жигули и тишина. ИИ готовит посты и предлагает готовые романтик-пакеты «Дом + Чан».
-          </p>
-          <span class="text-[11px] font-mono text-nature-terracotta bg-nature-terracotta/10 px-2.5 py-1 rounded">Выходные 100% Sold Out</span>
-        </div>
-
-        <div class="nature-card rounded-2xl p-5 border border-white/5">
-          <div class="text-2xl mb-2">💻</div>
-          <h3 class="text-base font-bold text-white mb-2">«Workation / Офис у реки»</h3>
-          <p class="text-xs text-nature-muted leading-relaxed mb-4">
-            Заполнение пустующих будней (пн–чт). Быстрый Wi-Fi, рабочий стол, камин и кофе. Таргетируемся на удаленщиков из Самары и Тольятти тарифом «4 будних дня со скидкой 30%».
-          </p>
-          <span class="text-[11px] font-mono text-nature-sand bg-nature-sand/10 px-2.5 py-1 rounded">Заполнение будней</span>
-        </div>
-
-        <div class="nature-card rounded-2xl p-5 border border-white/5">
-          <div class="text-2xl mb-2">📩</div>
-          <h3 class="text-base font-bold text-white mb-2">Реактивация базы гостей</h3>
-          <p class="text-xs text-nature-muted leading-relaxed mb-4">
-            Те, кто уже отдыхал в «Бризе» летом, знают уровень комфорта. ИИ делает персональные рассылки: «Соскучились по Волге? Приглашаем согреться у камина со спецскидкой 20%».
-          </p>
-          <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded">0 ₽ рекламный бюджет</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 6: PRICING (100K & 150K) -->
-    <div class="slide-item w-full flex-col justify-center px-4">
-      <div class="mb-5 text-center sm:text-left">
-        <span class="text-xs font-mono text-nature-terracotta uppercase tracking-wider">Инвестиции в проект</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Два прозрачных тарифа внедрения</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl">
-        <!-- Tier 1 -->
-        <div class="nature-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between">
-          <div>
-            <div class="inline-block px-3 py-1 rounded-full bg-white/5 text-nature-muted text-[11px] font-mono uppercase mb-3">
-              Тариф 1
-            </div>
-            <h3 class="text-xl font-bold text-white">«Оптимальный Старт»</h3>
-            <p class="text-xs text-nature-muted mt-1 mb-4">Автоматизация продаж и ликвидация ночных потерь во всех каналах.</p>
-
-            <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 mb-5">
-              <div class="text-[11px] text-nature-muted">Разработка и внедрение:</div>
-              <div class="text-3xl font-extrabold text-white my-0.5">100 000 ₽</div>
-              <div class="text-xs text-nature-sand font-semibold">Поддержка: 7 900 ₽ / мес</div>
-            </div>
-
-            <ul class="space-y-2 text-xs text-nature-text">
-              <li class="flex items-start gap-2">
-                <span class="text-nature-sand font-bold">✔</span>
-                <span>Оцифрованная <strong>База знаний</strong> базы «Бриз» (Барн-70/130, правила, чан, баня)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-nature-sand font-bold">✔</span>
-                <span><strong>ИИ-агент</strong> со скриптами бронирования и допродаж</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-nature-sand font-bold">✔</span>
-                <span>Подключение <strong>3 каналов:</strong> Сайт (Tilda) + Telegram-бот + ВКонтакте</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-nature-sand font-bold">✔</span>
-                <span><strong>Модуль отзывов:</strong> генерация ответов на Яндекс.Картах и 2ГИС</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-nature-sand font-bold">✔</span>
-                <span>Связка с TravelLine и оповещения администраторов в TG</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Tier 2 -->
-        <div class="nature-card rounded-2xl p-6 border-2 border-nature-terracotta bg-nature-surface flex flex-col justify-between relative shadow-xl">
-          <div class="absolute -top-3 right-6 px-3 py-1 bg-nature-terracotta text-white font-extrabold text-[10px] rounded-full uppercase tracking-wider">
-            Максимальная автономия
-          </div>
-          <div>
-            <div class="inline-block px-3 py-1 rounded-full bg-nature-terracotta/20 text-nature-terracotta text-[11px] font-mono uppercase mb-3">
-              Тариф 2
-            </div>
-            <h3 class="text-xl font-bold text-white">«Флагман / Полная автономия»</h3>
-            <p class="text-xs text-nature-muted mt-1 mb-4">Полный цикл: от прогрева в несезон до допродаж гостю на территории.</p>
-
-            <div class="p-3.5 rounded-xl bg-black/40 border border-nature-terracotta/30 mb-5">
-              <div class="text-[11px] text-nature-muted">Разработка и внедрение:</div>
-              <div class="text-3xl font-extrabold text-white my-0.5">150 000 ₽</div>
-              <div class="text-xs text-nature-terracotta font-semibold">Поддержка: 9 900 ₽ / мес</div>
-            </div>
-
-            <ul class="space-y-2 text-xs text-nature-text">
-              <li class="flex items-start gap-2 font-semibold text-white">
-                <span class="text-nature-terracotta font-bold">★</span>
-                <span>Всё, что входит в тариф «Оптимальный», плюс:</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-nature-terracotta font-bold">✔</span>
-                <span><strong>Реактиватор несезона:</strong> умные авторассылки по базе летних гостей</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-nature-terracotta font-bold">✔</span>
-                <span><strong>Цифровой On-site гид:</strong> путеводитель для заселившихся (навигация, Wi-Fi, меню кафе, заказ дров)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-nature-terracotta font-bold">✔</span>
-                <span><strong>Автодопродажи на месте:</strong> заказ бани, повторного чана, продления</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-nature-terracotta font-bold">✔</span>
-                <span><strong>Контроль качества:</strong> суфлер и аудит диалогов живых администраторов</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 7: SIMPLE ROI FOR OWNER -->
-    <div class="slide-item w-full flex-col justify-center px-4">
-      <div class="mb-6 text-center sm:text-left">
-        <span class="text-xs font-mono text-nature-terracotta uppercase tracking-wider">Экономика для собственника</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Окупаемость на пальцах</h2>
-        <p class="text-xs sm:text-sm text-nature-muted mt-1">Сколько дополнительной выручки приносит система каждый месяц:</p>
-      </div>
-
-      <div class="nature-card rounded-2xl p-6 max-w-4xl border border-white/10 space-y-6">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-          <div class="p-4 rounded-xl bg-white/5 border border-white/5">
-            <div class="text-2xl font-black text-white mb-1">+1 бронь</div>
-            <div class="text-xs text-nature-muted">спасенная ночью от ухода</div>
-            <div class="text-sm font-bold text-nature-sand mt-2">+8 000 – 13 000 ₽</div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-white/5 border border-white/5">
-            <div class="text-2xl font-black text-white mb-1">+2 чана</div>
-            <div class="text-xs text-nature-muted">допродажа Фурако к заездам</div>
-            <div class="text-sm font-bold text-nature-terracotta mt-2">+10 000 ₽</div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-white/5 border border-white/5">
-            <div class="text-2xl font-black text-white mb-1">+1 будний день</div>
-            <div class="text-xs text-nature-muted">заполненный в несезон</div>
-            <div class="text-sm font-bold text-emerald-400 mt-2">+7 000 ₽</div>
-          </div>
-        </div>
-
-        <div class="p-5 rounded-xl bg-nature-surface border border-nature-terracotta/40 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <div class="text-lg font-bold text-white">Дополнительно: от +30 000 до +55 000 ₽ каждый месяц</div>
-            <div class="text-xs text-nature-muted mt-0.5">При стоимости ежемесячной поддержки всего 7 900 – 9 900 ₽ / мес.</div>
-          </div>
-          <div class="px-4 py-2 rounded-lg bg-nature-terracotta text-white font-extrabold text-xs uppercase tracking-wider shrink-0">
-            Окупаемость за 1.5–2 месяца
-          </div>
-        </div>
-
-        <p class="text-xs text-nature-muted text-center italic">
-          * Ежемесячное обслуживание окупается первой же бронью или одной растопкой чана Фурако.
+        <h1 class="title-editorial title-hero-white">
+          <span class="nobr">БАЗА ОТДЫХА «БРИЗ»</span> <span style="font-weight: 300; opacity: 0.7;">×</span> <span class="nobr">AI-ТРАНСФОРМАЦИЯ</span>
+        </h1>
+        <div class="title-hero-rule" aria-hidden="true"></div>
+        <p class="subtitle-hero-white">
+          Умный консьерж 24/7, омниканальные автопродажи коттеджей и&nbsp;система заполнения базы отдыха в&nbsp;несезон
         </p>
+        <p class="subtitle-hero-white" style="margin-top: 0.75rem; font-size: 0.95rem; opacity: 0.88; max-width: 780px;">
+          Как закрывать 100% ночных броней, автоматически допродавать чан Фурако и&nbsp;баню и&nbsp;растить выручку без&nbsp;расширения штата
+        </p>
+        <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;">
+          <button id="btnExplore" class="cta-explore-btn" type="button">К&nbsp;сути предложения →</button>
+        </div>
+        <div class="author-hero-white">Кадацкий Илья | Консалтинг и&nbsp;внедрение ИИ-систем | 2026</div>
       </div>
-    </div>
+    </section>
 
-    <!-- SLIDE 8: ROADMAP & NEXT STEP -->
-    <div class="slide-item w-full flex-col justify-center px-4 text-center sm:text-left">
-      <div class="mb-6">
-        <span class="text-xs font-mono text-nature-terracotta uppercase tracking-wider">План внедрения</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Запуск за 14 календарных дней</h2>
-        <p class="text-xs sm:text-sm text-nature-muted mt-1">От согласования концепции до первого реального диалога с гостем:</p>
+    <!-- 02 PAIN POINTS / AUDIT -->
+    <section class="slide" data-slide="1">
+      <div class="slide-content">
+        <div class="briz-pill">Слайд 02 / Аудит ситуации</div>
+        <h1 class="title-editorial">Где база «Бриз» теряет выручку прямо сейчас?</h1>
+        <p class="subtitle-light">Анализ обращений на&nbsp;загородный отдых в&nbsp;Самарской области показывает 4 ключевые точки утечки прибыли:</p>
+
+        <div class="grid-2" style="margin-top: 0.5rem;">
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="metrics-strip">
+              <div class="metric-tile metric-tile-accent">
+                <div class="metric-tile-value">38%</div>
+                <div class="metric-tile-label">ночных запросов без&nbsp;ответа</div>
+              </div>
+              <div class="metric-tile metric-tile-pine">
+                <div class="metric-tile-value">-25%</div>
+                <div class="metric-tile-label">недополученного чека</div>
+              </div>
+            </div>
+
+            <div class="briz-card briz-card-featured">
+              <div class="card-meta">Проблема 1 · Ночные лиды</div>
+              <div class="card-title">Потеря клиентов с&nbsp;21:00 до&nbsp;01:00</div>
+              <div class="card-desc">
+                Семьи и&nbsp;пары выбирают коттеджи поздно вечером. Администраторы в&nbsp;это время спят или&nbsp;заняты на&nbsp;территории. Ожидание ответа свыше 15&nbsp;минут уводит гостя на&nbsp;соседние турбазы на&nbsp;Волге.
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="briz-card">
+              <div class="card-meta">Проблема 2 · Сезонная яма</div>
+              <div class="card-title">Пустующие будни с&nbsp;октября по&nbsp;апрель</div>
+              <div class="card-desc">
+                Летом волжские пляжи продаются сами. С&nbsp;осени до&nbsp;весны барнхаусы простаивают с&nbsp;понедельника по&nbsp;четверг, пока постоянные расходы на&nbsp;отопление, аренду и&nbsp;персонал продолжают начисляться.
+              </div>
+            </div>
+
+            <div class="briz-card briz-card-pine">
+              <div class="card-meta">Проблема 3 · Человеческий фактор</div>
+              <div class="card-title">Забытые допродажи и&nbsp;молчание на&nbsp;картах</div>
+              <div class="card-desc">
+                Тоня в&nbsp;рутинных вопросах («где Wi-Fi?», «как проехать?»), менеджеры забывают допродавать чан Фурако (+5&nbsp;000&nbsp;₽). А&nbsp;отзывы в&nbsp;Яндекс.Картах и&nbsp;2ГИС ждут ответов неделями, роняя позицию турбазы в&nbsp;поиске.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-box">
+          <strong>Вывод аудита:</strong> Базе отдыха нужен автономный сотрудник, который мгновенно отвечает в&nbsp;любое время суток, не&nbsp;устает и&nbsp;в&nbsp;каждом диалоге предлагает баню, чан и&nbsp;продление.
+        </div>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 max-w-5xl mb-8 text-left">
-        <div class="nature-card rounded-xl p-4 border border-white/5">
-          <div class="text-[11px] font-mono text-nature-terracotta font-bold mb-1">ДНИ 1–3</div>
-          <div class="font-bold text-white text-xs mb-1">Оцифровка данных</div>
-          <p class="text-[11px] text-nature-muted leading-relaxed">Сбор регламентов, прайсов на чаны/бани, фото и правил dog-friendly.</p>
+    <!-- 03 SOLUTION & ARCHITECTURE -->
+    <section class="slide" data-slide="2">
+      <div class="slide-content">
+        <div class="briz-pill">Слайд 03 / Архитектура решения</div>
+        <h1 class="title-editorial">Единый умный агент базы отдыха «Бриз»</h1>
+        <p class="subtitle-light">Кастомная система, оцифровавшая мозг турбазы и&nbsp;работающая синхронно во&nbsp;всех каналах</p>
+
+        <div class="grid-3" style="margin-top: 0.5rem;">
+          <div class="briz-card briz-card-pine">
+            <div class="card-meta">Уровень 1</div>
+            <div class="card-title">База знаний «Бриз»</div>
+            <div class="card-desc" style="margin-bottom: 0.75rem;">
+              Векторная база, хранящая 100% регламентов и&nbsp;данных турбазы:
+            </div>
+            <ul class="clean-list">
+              <li>Планировки и&nbsp;параметры Барн-70 и&nbsp;Барн-130.</li>
+              <li>Правила dog-friendly, залоги и&nbsp;время заезда.</li>
+              <li>Протокол растопки чана Фурако и&nbsp;бани.</li>
+              <li>Меню кафе «Бриз» и&nbsp;сезонная схема проезда.</li>
+            </ul>
+          </div>
+
+          <div class="briz-card briz-card-featured">
+            <div class="card-meta">Уровень 2 · Ядро</div>
+            <div class="card-title">Умный Консьерж</div>
+            <div class="card-desc" style="margin-bottom: 0.75rem;">
+              Интеллектуальное ядро на&nbsp;базе передовой модели DeepSeek:
+            </div>
+            <ul class="clean-list">
+              <li>Живой язык гостеприимства без&nbsp;роботизированных фраз.</li>
+              <li>Встроенные скрипты мягких допродаж чана и&nbsp;бани.</li>
+              <li>Точный подбор коттеджа под&nbsp;состав компании.</li>
+              <li>100% защита от&nbsp;выдумок и&nbsp;галлюцинаций.</li>
+            </ul>
+          </div>
+
+          <div class="briz-card">
+            <div class="card-meta">Уровень 3</div>
+            <div class="card-title">Омниканальность</div>
+            <div class="card-desc" style="margin-bottom: 0.75rem;">
+              Единый мозг отвечает во&nbsp;всех точках входа гостей:
+            </div>
+            <ul class="clean-list">
+              <li><strong>Сайт briz.club:</strong> стильный нативный чат-виджет.</li>
+              <li><strong>Telegram:</strong> официальный бот турбазы.</li>
+              <li><strong>ВКонтакте:</strong> сообщения сообщества.</li>
+              <li><strong>TravelLine:</strong> формирование прямых ссылок на&nbsp;бронь.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="nature-card rounded-xl p-4 border border-white/5">
-          <div class="text-[11px] font-mono text-nature-sand font-bold mb-1">ДНИ 4–7</div>
-          <div class="font-bold text-white text-xs mb-1">Сборка ИИ-агента</div>
-          <p class="text-[11px] text-nature-muted leading-relaxed">Настройка логики DeepSeek/Qwen, защита от ошибок и скрипты допродаж.</p>
-        </div>
-
-        <div class="nature-card rounded-xl p-4 border border-white/5">
-          <div class="text-[11px] font-mono text-emerald-400 font-bold mb-1">ДНИ 8–11</div>
-          <div class="font-bold text-white text-xs mb-1">Интеграция каналов</div>
-          <p class="text-[11px] text-nature-muted leading-relaxed">Виджет на сайт briz.club, запуск бота в TG и VK, модуль карт.</p>
-        </div>
-
-        <div class="nature-card rounded-xl p-4 border border-white/5">
-          <div class="text-[11px] font-mono text-nature-muted font-bold mb-1">ДНИ 12–14</div>
-          <div class="font-bold text-white text-xs mb-1">Тест и Старт</div>
-          <p class="text-[11px] text-nature-muted leading-relaxed">Тестирование сценариев, обучение администраторов и боевой запуск.</p>
+        <div class="callout-box">
+          <div class="card-meta" style="margin-bottom: 0.2rem;">О технологиях для собственника</div>
+          <strong>Почему китайские модели DeepSeek / Qwen?</strong> Они отвечают за&nbsp;1&nbsp;секунду на&nbsp;прекрасном русском языке, понимают контекст на&nbsp;уровне GPT-4o, не&nbsp;подвержены рискам зарубежных санкций и&nbsp;обходятся в&nbsp;разработке и&nbsp;поддержке в&nbsp;разы экономичнее.
         </div>
       </div>
+    </section>
 
-      <div class="p-6 rounded-2xl bg-nature-surface border border-white/10 max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>
-          <h3 class="text-base font-bold text-white">Следующий шаг: 15-минутная онлайн-демонстрация</h3>
-          <p class="text-xs text-nature-muted mt-1">Покажем живой прототип агента на примере Барн-70 и согласуем пилотный запуск.</p>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="tel:+79372014444" class="px-5 py-2.5 rounded-xl font-bold text-xs bg-nature-terracotta hover:bg-nature-terracottaDark text-white transition-all shadow-md">
-            Согласовать пилот →
-          </a>
+    <!-- 04 LIVE DIALOGUE CASE -->
+    <section class="slide" data-slide="3">
+      <div class="slide-content">
+        <div class="briz-pill">Слайд 04 / Живой сценарий</div>
+        <h1 class="title-editorial">Как агент закрывает сделку и&nbsp;допродает чан в&nbsp;23:40</h1>
+        <p class="subtitle-light">Реальный сценарий: ночное обращение гостя с&nbsp;сайта или&nbsp;мессенджера</p>
+
+        <div class="grid-2" style="margin-top: 0.5rem; align-items: start;">
+          <div class="chat-container">
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-light); border-bottom: 1px solid var(--border-soft); padding-bottom: 0.5rem;">
+              <span>Гость (с&nbsp;сайта briz.club)</span>
+              <span>Суббота, 23:40</span>
+            </div>
+
+            <div class="chat-bubble-guest">
+              Здравствуйте! Хотим приехать в&nbsp;следующие выходные вдвоем, но&nbsp;у&nbsp;нас шпиц 3&nbsp;кг. Есть свободный коттедж с&nbsp;красивым видом на&nbsp;Жигули?
+            </div>
+
+            <div class="chat-bubble-ai">
+              <p style="margin-bottom: 0.5rem;">
+                Здравствуйте! С&nbsp;радостью примем вас с&nbsp;питомцем 🐾 Мы в&nbsp;«Бризе» dog-friendly, шпицу на&nbsp;нашем волжском берегу точно понравится простор!
+              </p>
+              <p style="margin-bottom: 0.5rem;">
+                Для&nbsp;отдыха вдвоем идеально подойдет двухэтажный коттедж <strong>«Барн Хаус-70»</strong>: панорамные окна прямо на&nbsp;Жигулевские горы, уютная гостиная с&nbsp;камином и&nbsp;терраса с&nbsp;мангалом.
+              </p>
+              <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 6px; padding: 0.5rem 0.75rem; margin: 0.5rem 0; font-size: 0.82rem;">
+                ♨️ <strong>Рекомендуем к&nbsp;заезду:</strong> многие пары бронируют горячий <strong>чан Фурако</strong> под&nbsp;звездами (5&nbsp;000&nbsp;₽). Можем растопить его к&nbsp;вашему приезду в&nbsp;19:00 с&nbsp;пихтовыми веточками и&nbsp;волжским травяным чаем?
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">
+                Стоимость коттеджа&nbsp;— 8&nbsp;000&nbsp;₽/сутки. Забронировать за&nbsp;вами Барн-70 на&nbsp;24–26&nbsp;ноября?
+              </p>
+            </div>
+
+            <div class="chat-bubble-guest">
+              Да, чан обязательно растопите к&nbsp;19:00! Давайте ссылку на&nbsp;оплату.
+            </div>
+
+            <div class="chat-bubble-ai" style="border-left-color: #2e7d32;">
+              Сформировал бронь на&nbsp;Барн-70 + Чан Фурако к&nbsp;заезду. Перейдите по&nbsp;ссылке для&nbsp;оплаты через TravelLine →
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="briz-card briz-card-featured">
+              <div class="card-meta">Результат диалога</div>
+              <div class="card-title">Чек увеличен на&nbsp;+5&nbsp;000&nbsp;₽ ночью</div>
+              <div class="card-desc">
+                Диалог занял ровно 90&nbsp;секунд. Гость не&nbsp;ушел к&nbsp;конкурентам, коттедж сдан, и&nbsp;автоматически продана маржинальная услуга чана Фурако без&nbsp;участия администратора.
+              </div>
+            </div>
+
+            <div class="briz-card">
+              <div class="card-meta">Уведомление персоналу</div>
+              <div class="card-title">Мгновенный пуш в&nbsp;Telegram админа</div>
+              <div class="card-desc">
+                В&nbsp;закрытый чат администраторов турбазы падает готовая карточка: <em>«Бронь: Барн-70, даты: 24–26 ноября, гость: +7 999..., допуслуга: Чан Фурако к&nbsp;19:00, оплачено в&nbsp;TravelLine»</em>.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- 05 OFF-SEASON STRATEGY -->
+    <section class="slide" data-slide="4">
+      <div class="slide-content">
+        <div class="briz-pill">Слайд 05 / Загрузка несезона</div>
+        <h1 class="title-editorial">Как заполнять коттеджи с&nbsp;ноября по&nbsp;апрель?</h1>
+        <p class="subtitle-light">В&nbsp;несезон на&nbsp;Волге нельзя продавать просто «домик». Мы продаем готовые эмоциональные ритуалы:</p>
+
+        <div class="grid-3" style="margin-top: 0.5rem;">
+          <div class="briz-card briz-card-featured">
+            <div class="card-meta">Сценарий 1 · Главный хит</div>
+            <div class="card-title">«Чан Фурако в&nbsp;мороз»</div>
+            <div class="card-desc" style="margin-bottom: 0.75rem;">
+              Горячая вода под&nbsp;открытым небом, пар над&nbsp;чаном, сосновые ветки и&nbsp;заснеженные Жигули. Самый вирусный контент для&nbsp;VK Клипов и&nbsp;Reels.
+            </div>
+            <div class="metric-tile-label" style="color: var(--accent-terracotta);">Пакет «Романтик + Чан»</div>
+          </div>
+
+          <div class="briz-card">
+            <div class="card-meta">Сценарий 2 · Загрузка будней</div>
+            <div class="card-title">«Workation у&nbsp;реки»</div>
+            <div class="card-desc" style="margin-bottom: 0.75rem;">
+              Заполнение пустых понедельников–четвергов. У&nbsp;вас отличный Wi-Fi, камин и&nbsp;тишина. Таргет на&nbsp;IT и&nbsp;удаленщиков Самары: «4&nbsp;будних дня со&nbsp;скидкой 30%».
+            </div>
+            <div class="metric-tile-label" style="color: var(--accent-sand);">Заполнение будней на&nbsp;40%+</div>
+          </div>
+
+          <div class="briz-card briz-card-pine">
+            <div class="card-meta">Сценарий 3 · Ноль бюджета</div>
+            <div class="card-title">Реактивация базы гостей</div>
+            <div class="card-desc" style="margin-bottom: 0.75rem;">
+              Те, кто отдыхал в&nbsp;«Бризе» летом, знают ваш комфорт. ИИ сегментирует базу и&nbsp;делает точечные рассылки: «Соскучились по&nbsp;Волге? Приезжайте согреться у&nbsp;камина со&nbsp;спецскидкой».
+            </div>
+            <div class="metric-tile-label" style="color: #2e7d32;">Конверсия до&nbsp;12% из&nbsp;базы</div>
+          </div>
+        </div>
+
+        <div class="callout-box">
+          <strong>Ключевой эффект:</strong> ИИ-агент не&nbsp;просто отвечает входящим, а&nbsp;сам предлагает нужный сценарий гостю в&nbsp;зависимости от&nbsp;дня недели и&nbsp;состава отдыхающих.
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 PRICING TIERS (100K & 150K) -->
+    <section class="slide" data-slide="5">
+      <div class="slide-content">
+        <div class="briz-pill">Слайд 06 / Стоимость внедрения</div>
+        <h1 class="title-editorial">Два прозрачных тарифа под&nbsp;задачи базы «Бриз»</h1>
+        <p class="subtitle-light">Фиксированная стоимость разработки под&nbsp;ключ и&nbsp;комфортная поддержка дешевле суток аренды одного коттеджа</p>
+
+        <div class="grid-2" style="margin-top: 0.5rem;">
+          <!-- Tier 1 -->
+          <div class="briz-card" style="height: 100%; justify-content: space-between;">
+            <div>
+              <div class="card-meta">Тариф 1</div>
+              <div class="card-title" style="font-size: 1.35rem;">«Оптимальный Старт»</div>
+              <div class="card-desc" style="margin-bottom: 1rem;">
+                Автоматизация бронирований, ликвидация ночных потерь лидов во&nbsp;всех каналах и&nbsp;модерация отзывов.
+              </div>
+
+              <div class="metrics-strip" style="margin-bottom: 1.25rem;">
+                <div class="metric-tile">
+                  <div class="metric-tile-value">100&nbsp;000&nbsp;₽</div>
+                  <div class="metric-tile-label">разработка под&nbsp;ключ</div>
+                </div>
+                <div class="metric-tile">
+                  <div class="metric-tile-value" style="font-size: 1.4rem;">7&nbsp;900&nbsp;₽</div>
+                  <div class="metric-tile-label">в&nbsp;месяц (сервер, токены, мониторинг)</div>
+                </div>
+              </div>
+
+              <ul class="clean-list">
+                <li>Оцифровка <strong>Базы знаний</strong> турбазы «Бриз» (домики, правила, цены, чаны).</li>
+                <li>Разработка <strong>ИИ-агента</strong> со&nbsp;скриптами консультаций и&nbsp;допродаж.</li>
+                <li>Подключение <strong>3&nbsp;каналов:</strong> Сайт briz.club + Telegram-бот + ВКонтакте.</li>
+                <li><strong>Модуль отзывов:</strong> автогенерация ответов для&nbsp;Яндекс.Карт и&nbsp;2ГИС.</li>
+                <li>Интеграция с&nbsp;TravelLine и&nbsp;уведомления администраторов в&nbsp;Telegram.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tier 2 -->
+          <div class="briz-card briz-card-featured" style="height: 100%; justify-content: space-between; background: #faf9f6;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="card-meta" style="color: var(--accent-terracotta);">Тариф 2 · Максимальная автономия</div>
+                <span class="briz-pill" style="padding: 0.2rem 0.5rem; font-size: 0.65rem;">Хит</span>
+              </div>
+              <div class="card-title" style="font-size: 1.35rem;">«Флагман / Полная автономия»</div>
+              <div class="card-desc" style="margin-bottom: 1rem;">
+                Полный цикл: от&nbsp;прогрева и&nbsp;заполнения несезона до&nbsp;роста среднего чека гостя на&nbsp;территории базы.
+              </div>
+
+              <div class="metrics-strip" style="margin-bottom: 1.25rem;">
+                <div class="metric-tile metric-tile-accent">
+                  <div class="metric-tile-value">150&nbsp;000&nbsp;₽</div>
+                  <div class="metric-tile-label">разработка под&nbsp;ключ</div>
+                </div>
+                <div class="metric-tile metric-tile-accent">
+                  <div class="metric-tile-value" style="font-size: 1.4rem;">9&nbsp;900&nbsp;₽</div>
+                  <div class="metric-tile-label">в&nbsp;месяц (все включено)</div>
+                </div>
+              </div>
+
+              <ul class="clean-list">
+                <li><strong>Всё, что входит в&nbsp;«Оптимальный Старт», плюс:</strong></li>
+                <li><strong>Реактиватор несезона:</strong> модуль умных авторассылок по&nbsp;базе летних гостей.</li>
+                <li><strong>Цифровой On-site гид:</strong> путеводитель для&nbsp;заселившихся (навигация, Wi-Fi, меню кафе).</li>
+                <li><strong>Автодопродажи на&nbsp;месте:</strong> заказ бани, повторного чана, дров и&nbsp;продления коттеджа.</li>
+                <li><strong>Контроль качества:</strong> ИИ-суфлер и&nbsp;аудит работы живых администраторов.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 ROI & ECONOMICS -->
+    <section class="slide" data-slide="6">
+      <div class="slide-content">
+        <div class="briz-pill">Слайд 07 / Экономика проекта</div>
+        <h1 class="title-editorial">Окупаемость на&nbsp;пальцах для&nbsp;собственника</h1>
+        <p class="subtitle-light">Сколько чистой дополнительной выручки приносит система каждый месяц:</p>
+
+        <div class="grid-3" style="margin-top: 0.5rem;">
+          <div class="metric-tile metric-tile-accent">
+            <div class="metric-tile-value">+8&nbsp;000&nbsp;– 13&nbsp;000&nbsp;₽</div>
+            <div class="metric-tile-label">1 спасенная ночная бронь</div>
+            <div class="card-desc" style="font-size: 0.8rem; margin-top: 0.5rem;">
+              Гость, который получил ответ в&nbsp;23:30 и&nbsp;оплатил Барн-70 вместо ухода к&nbsp;конкурентам.
+            </div>
+          </div>
+
+          <div class="metric-tile metric-tile-accent">
+            <div class="metric-tile-value">+10&nbsp;000&nbsp;₽</div>
+            <div class="metric-tile-label">2 допроданных чана Фурако</div>
+            <div class="card-desc" style="font-size: 0.8rem; margin-top: 0.5rem;">
+              ИИ автоматически предложил растопить чан к&nbsp;заезду (+5&nbsp;000&nbsp;₽ за&nbsp;сеанс).
+            </div>
+          </div>
+
+          <div class="metric-tile metric-tile-pine">
+            <div class="metric-tile-value">+14&nbsp;000&nbsp;₽</div>
+            <div class="metric-tile-label">2 заполненных будних дня</div>
+            <div class="card-desc" style="font-size: 0.8rem; margin-top: 0.5rem;">
+              Сдача коттеджа посреди недели удаленщикам или&nbsp;по&nbsp;акции из&nbsp;базы старых гостей.
+            </div>
+          </div>
+        </div>
+
+        <div class="briz-card briz-card-featured" style="margin-top: 0.5rem; background: #ffffff;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <div class="card-meta">Итоговый финансовый результат</div>
+              <div class="title-editorial" style="font-size: 1.6rem; color: var(--accent-terracotta);">
+                +35&nbsp;000&nbsp;– 55&nbsp;000&nbsp;₽ дополнительной выручки в&nbsp;месяц
+              </div>
+              <div class="card-desc" style="margin-top: 0.25rem;">
+                При&nbsp;расходах на&nbsp;ежемесячную поддержку всего 7&nbsp;900&nbsp;– 9&nbsp;900&nbsp;₽/мес.
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <div class="briz-pill" style="background: #2e7d32; color: #ffffff; border-color: #2e7d32; font-size: 0.8rem;">
+                Окупаемость внедрения&nbsp;— 1.5–2 месяца
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-box">
+          <strong>Главный финансовый факт:</strong> Ежемесячное обслуживание системы (7&nbsp;900&nbsp;₽) окупается <strong>с&nbsp;первой же спасенной брони</strong> или&nbsp;двух растопок чана Фурако.
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 ROADMAP & NEXT STEPS -->
+    <section class="slide" data-slide="7">
+      <div class="slide-content">
+        <div class="briz-pill">Слайд 08 / План внедрения</div>
+        <h1 class="title-editorial">Запуск системы за&nbsp;14&nbsp;календарных дней</h1>
+        <p class="subtitle-light">Пошаговый график работ от&nbsp;старта до&nbsp;первого реального бронирования:</p>
+
+        <div class="grid-4" style="margin-top: 0.5rem;">
+          <div class="briz-card briz-card-pine">
+            <div class="card-meta">Дни 1–3</div>
+            <div class="card-title" style="font-size: 1rem;">Оцифровка базы</div>
+            <div class="card-desc" style="font-size: 0.82rem;">
+              Сбор регламентов, прайсов на&nbsp;коттеджи и&nbsp;чаны, правил dog-friendly, меню кафе и&nbsp;логистики.
+            </div>
+          </div>
+
+          <div class="briz-card briz-card-featured">
+            <div class="card-meta">Дни 4–7</div>
+            <div class="card-title" style="font-size: 1rem;">Сборка ИИ-агента</div>
+            <div class="card-desc" style="font-size: 0.82rem;">
+              Настройка модели DeepSeek, ролевой модели гостеприимства, скриптов допродаж и&nbsp;защиты от&nbsp;ошибок.
+            </div>
+          </div>
+
+          <div class="briz-card">
+            <div class="card-meta">Дни 8–11</div>
+            <div class="card-title" style="font-size: 1rem;">Подключение каналов</div>
+            <div class="card-desc" style="font-size: 0.82rem;">
+              Установка виджета на&nbsp;briz.club, запуск бота в&nbsp;Telegram и&nbsp;ВКонтакте, модуль для&nbsp;Яндекс.Карт и&nbsp;2ГИС.
+            </div>
+          </div>
+
+          <div class="briz-card briz-card-pine">
+            <div class="card-meta">Дни 12–14</div>
+            <div class="card-title" style="font-size: 1rem;">Тест и&nbsp;старт</div>
+            <div class="card-desc" style="font-size: 0.82rem;">
+              Сквозное тестирование сценариев с&nbsp;администраторами, обучение персонала и&nbsp;боевой запуск.
+            </div>
+          </div>
+        </div>
+
+        <div class="briz-card" style="margin-top: 0.75rem; background: #ffffff; border: 1px solid var(--border-color); padding: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.25rem;">
+            <div>
+              <div class="card-meta">Следующий шаг</div>
+              <div class="card-title" style="font-size: 1.25rem; margin-bottom: 0.25rem;">
+                15-минутная онлайн-демонстрация рабочего прототипа
+              </div>
+              <div class="card-desc">
+                Покажем диалог агента по&nbsp;коттеджу Барн-70 и&nbsp;согласуем пилотный контур внедрения.
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="tel:+79372014444" class="cta-explore-btn" style="background: var(--text-main); color: #ffffff; text-decoration: none;">
+                Согласовать пилот →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer totalSlides={8} />
   </div>
-</Layout>
+
+  <!-- Deck Controller Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const currentNumEl = document.getElementById('currentSlideNum');
+    const progressFill = document.getElementById('progressFill');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const btnExplore = document.getElementById('btnExplore');
+    const btnFullscreen = document.getElementById('btnFullscreen');
+    const tabBtns = document.querySelectorAll('.tab-btn');
+
+    function goToSlide(index: number) {
+      if (index < 0 || index >= totalSlides) return;
+      currentSlide = index;
+
+      slides.forEach((slide, idx) => {
+        if (idx === currentSlide) {
+          slide.classList.add('active');
+          slide.scrollTop = 0;
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      if (currentNumEl) {
+        currentNumEl.textContent = String(currentSlide + 1).padStart(2, '0');
+      }
+
+      if (progressFill) {
+        progressFill.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+      }
+
+      tabBtns.forEach((btn, idx) => {
+        if (idx === currentSlide) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      window.location.hash = `slide-${currentSlide + 1}`;
+    }
+
+    btnPrev?.addEventListener('click', () => goToSlide(currentSlide - 1));
+    btnNext?.addEventListener('click', () => {
+      if (currentSlide === totalSlides - 1) goToSlide(0);
+      else goToSlide(currentSlide + 1);
+    });
+    btnExplore?.addEventListener('click', () => goToSlide(1));
+
+    tabBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const slideIdx = parseInt((e.currentTarget as HTMLElement).getAttribute('data-slide') || '0', 10);
+        goToSlide(slideIdx);
+      });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        if (currentSlide === totalSlides - 1) goToSlide(0);
+        else goToSlide(currentSlide + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        goToSlide(currentSlide - 1);
+      }
+    });
+
+    let isWheelThrottled = false;
+    window.addEventListener('wheel', (e) => {
+      const activeSlide = slides[currentSlide] as HTMLElement;
+      if (!activeSlide) return;
+
+      const isAtBottom = activeSlide.scrollTop + activeSlide.clientHeight >= activeSlide.scrollHeight - 8;
+      const isAtTop = activeSlide.scrollTop <= 8;
+
+      if (e.deltaY > 0 && isAtBottom && currentSlide < totalSlides - 1) {
+        e.preventDefault();
+        if (!isWheelThrottled) {
+          isWheelThrottled = true;
+          goToSlide(currentSlide + 1);
+          setTimeout(() => { isWheelThrottled = false; }, 400);
+        }
+      } else if (e.deltaY < 0 && isAtTop && currentSlide > 0) {
+        e.preventDefault();
+        if (!isWheelThrottled) {
+          isWheelThrottled = true;
+          goToSlide(currentSlide - 1);
+          setTimeout(() => { isWheelThrottled = false; }, 400);
+        }
+      }
+    }, { passive: false });
+
+    btnFullscreen?.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    const deckContainer = document.querySelector('.deck-container');
+
+    deckContainer?.addEventListener('touchstart', (e: any) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    deckContainer?.addEventListener('touchend', (e: any) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+      if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0) {
+          if (currentSlide === totalSlides - 1) goToSlide(0);
+          else goToSlide(currentSlide + 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+    }, { passive: true });
+
+    // Init from URL hash
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#slide-')) {
+      const parsed = parseInt(hash.replace('#slide-', ''), 10) - 1;
+      if (!isNaN(parsed) && parsed >= 0 && parsed < totalSlides) {
+        goToSlide(parsed);
+      }
+    }
+  </script>
+</body>
+</html>
