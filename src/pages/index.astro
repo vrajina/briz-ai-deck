@@ -1,0 +1,649 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ИИ-трансформация базы отдыха «Бриз» | Интерактивное КП">
+  <!-- 1. HERO SECTION -->
+  <section id="hero" class="relative min-h-[90vh] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-semibold uppercase tracking-wider mb-8">
+        <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+        Коммерческое предложение для briz.club
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        ИИ-трансформация <br />
+        <span class="text-gradient-orange">базы отдыха «Бриз»</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
+        Умный консьерж 24/7, омниканальные автопродажи коттеджей, управление отзывами на картах и система заполнения домиков в несезон без раздувания штата.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-400 font-mono mb-12">
+        <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 flex items-center gap-2">
+          <span class="text-brand-orange font-bold">📍</span> Самара, берег Волги
+        </div>
+        <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 flex items-center gap-2">
+          <span class="text-brand-orange font-bold">🏠</span> Барнхаусы 70 & 130 м²
+        </div>
+        <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 flex items-center gap-2">
+          <span class="text-brand-orange font-bold">♨️</span> Чан Фурако & Баня
+        </div>
+        <div class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 flex items-center gap-2">
+          <span class="text-brand-orange font-bold">⚡</span> Интеграция с TravelLine
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#pricing" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-brand-orange to-brand-amber text-black hover:opacity-95 transition-all shadow-xl shadow-brand-orange/20">
+          Смотреть тарифы и окупаемость →
+        </a>
+        <a href="#demo" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm bg-white/5 border border-white/15 text-white hover:bg-white/10 transition-all">
+          Интерактивный сценарий диалога
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. AUDIT & PAIN POINTS -->
+  <section id="audit" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">Аудит текущей модели</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Где турбаза теряет выручку прямо сейчас?</h3>
+        <p class="text-gray-400 mt-4 text-sm sm:text-base">
+          Анализ поведения гостей загородного отдыха в Самарской области показывает 4 ключевые точки утечки прибыли.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-card glass-card-hover rounded-2xl p-8 border-l-4 border-l-red-500">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-2xl">🌙</span>
+            <span class="text-xs font-mono text-red-400 bg-red-500/10 px-2.5 py-1 rounded">Потеря 35–40% ночных лидов</span>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Ночные и поздние запросы</h4>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Большинство пар и семей выбирают загородный отдых с 21:00 до 01:00. Администраторы в это время спят или не успевают отвечать в WhatsApp/TG/VK. Ожидание ответа свыше 15 минут уводит клиента к конкурентам на Волге.
+          </p>
+        </div>
+
+        <div class="glass-card glass-card-hover rounded-2xl p-8 border-l-4 border-l-brand-orange">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-2xl">🍂</span>
+            <span class="text-xs font-mono text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded">Сезонная яма</span>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Пустующие будни с октября по апрель</h4>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Летом волжские пляжи продаются сами. С осени до весны домики простаивают с понедельника по четверг, пока турбаза продолжает оплачивать отопление, охрану, аренду земли и персонал.
+          </p>
+        </div>
+
+        <div class="glass-card glass-card-hover rounded-2xl p-8 border-l-4 border-l-amber-500">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-2xl">📞</span>
+            <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded">50+ звонков в день</span>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Рутина и человеческий фактор админов</h4>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Персонал тонет в однотипных вопросах: «А камин на дровах?», «Где пароль от Wi-Fi?», «Можно с собакой 4 кг?», «Какая дорога зимой?». Из-за усталости менеджеры забывают допродавать чан Фурако (+5 000 ₽) и баню.
+          </p>
+        </div>
+
+        <div class="glass-card glass-card-hover rounded-2xl p-8 border-l-4 border-l-blue-500">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-2xl">⭐</span>
+            <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded">Гео-сервисы</span>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Недожатый трафик с Яндекс.Карт и 2ГИС</h4>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Более 60% гостей ищут «турбаза с баней/чаном Самара» на картах. Медленные или шаблонные ответы на отзывы роняют рейтинг в алгоритмах поисковой выдачи карт.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ARCHITECTURE (KNOWLEDGE BASE + HARNESS) -->
+  <section id="architecture" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-surface/50 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">Инженерный подход</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Как устроена система: База знаний + Харнесс</h3>
+        <p class="text-gray-400 mt-4 text-sm sm:text-base">
+          Мы внедряем не примитивного чат-бота из конструктора с кнопками, а специализированную интеллектуальную экосистему турбазы «Бриз».
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between">
+          <div class="absolute -top-3 left-6 px-3 py-1 bg-brand-orange text-black font-extrabold text-xs rounded-full uppercase tracking-wider">
+            Уровень 1
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-white mt-2 mb-4">Оцифрованная База Знаний</h4>
+            <p class="text-gray-400 text-sm mb-6">
+              «Мозг» турбазы «Бриз». Векторная база, хранящая 100% данных объекта:
+            </p>
+            <ul class="space-y-3 text-xs text-gray-300">
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                Параметры Барн-70 и Барн-130 (вместимость, техника, вид)
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                Регламенты: dog-friendly, правила залога, время заезда/выезда
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                Услуги: чан Фурако (5 000 ₽), баня, меню кафе «Бриз»
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                Логистика: схема проезда по сезонам, навигация
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/10 text-[11px] font-mono text-gray-400">
+            Факты верифицированы • Защита от галлюцинаций
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between border-brand-orange/40 glow-orange">
+          <div class="absolute -top-3 left-6 px-3 py-1 bg-gradient-to-r from-brand-orange to-brand-amber text-black font-extrabold text-xs rounded-full uppercase tracking-wider">
+            Уровень 2 (Ядро)
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-white mt-2 mb-4">AI Harness & Agent Core</h4>
+            <p class="text-gray-400 text-sm mb-6">
+              Интеллектуальный харнесс (обвязка и контроллер агента):
+            </p>
+            <ul class="space-y-3 text-xs text-gray-300">
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                Системный промпт с Tone of Voice гостеприимного консьержа
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                Встроенные скрипты допродаж (Upsell чана, бани, романтик-пакетов)
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                Tool Calling: формирование ссылки на TravelLine с нужными датами
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                Эскалация: мгновенный перевод на человека при сложных вопросах
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/10 text-[11px] font-mono text-brand-orange">
+            Движок: DeepSeek-V3 / Qwen (сверхбыстрый и точный)
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between">
+          <div class="absolute -top-3 left-6 px-3 py-1 bg-white/20 text-white font-extrabold text-xs rounded-full uppercase tracking-wider">
+            Уровень 3
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-white mt-2 mb-4">Омниканальные Коннекторы</h4>
+            <p class="text-gray-400 text-sm mb-6">
+              Единый мозг работает синхронно во всех точках контакта:
+            </p>
+            <ul class="space-y-3 text-xs text-gray-300">
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <strong class="text-white">Сайт:</strong> стильный нативный виджет на Tilda
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <strong class="text-white">Telegram:</strong> официальный бот турбазы
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <strong class="text-white">ВКонтакте:</strong> сообщения официального сообщества
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <strong class="text-white">Админ-панель:</strong> уведомления о горячих лидах в Telegram админа
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/10 text-[11px] font-mono text-gray-400">
+            Сквозная история гостя во всех каналах
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. WHY CHINESE LLM (DEEPSEEK / QWEN) -->
+  <section id="deepseek" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-mono uppercase mb-3">
+          Технологический выбор
+        </div>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Почему китайские LLM (DeepSeek / Qwen) — идеальное решение?</h3>
+        <p class="text-gray-400 mt-4 text-sm sm:text-base">
+          Мы намеренно отказались как от слабых отечественных решений, так и от переоцененных западных API. Вот почему китайский стек выигрывает по всем фронтам:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-brand-orange text-3xl font-extrabold mb-2">в 20–30 раз</div>
+          <div class="text-white font-bold text-base mb-2">Дешевле OpenAI & Anthropic</div>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            DeepSeek V3 стоит ~$0.14 за 1 млн токенов (против $2.5–$15 у GPT-4o / Claude). Себестоимость одного диалога бронирования — <strong class="text-white">всего 15–30 копеек</strong>!
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-blue-400 text-3xl font-extrabold mb-2">На голову выше</div>
+          <div class="text-white font-bold text-base mb-2">Умнее базовых локальных LLM</div>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            В отличие от YandexGPT / GigaChat, DeepSeek V3 держит сложный многошаговый контекст, не теряет даты бронирования, филигранно соблюдает скрипты допродаж и не путает барнхаусы 70 и 130 м².
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-emerald-400 text-3xl font-extrabold mb-2">100% стабильность</div>
+          <div class="text-white font-bold text-base mb-2">Никаких санкций и блокировок</div>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Прямой доступ без необходимости иностранных кредитных карт, VPN и риска внезапной блокировки аккаунта отеля со стороны США.
+          </p>
+        </div>
+      </div>
+
+      <!-- Comparative table -->
+      <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
+        <div class="p-6 bg-white/5 border-b border-white/10 font-bold text-white text-sm">
+          Сравнение моделей для базы отдыха «Бриз»
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-black/40 text-gray-400 font-mono uppercase">
+              <tr>
+                <th class="p-4">Критерий</th>
+                <th class="p-4 text-brand-orange font-bold">DeepSeek V3 / Qwen (Наш выбор)</th>
+                <th class="p-4">ЯндексGPT / GigaChat</th>
+                <th class="p-4">OpenAI GPT-4o / Claude</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5 text-gray-300">
+              <tr>
+                <td class="p-4 font-semibold text-white">Качество диалога и память контекста</td>
+                <td class="p-4 text-brand-orange font-bold">Выдающееся (уровень GPT-4o)</td>
+                <td class="p-4 text-gray-400">Посредственное (часто сбивается)</td>
+                <td class="p-4 text-gray-300">Выдающееся</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-white">Себестоимость 1 000 диалогов</td>
+                <td class="p-4 text-emerald-400 font-bold">~150 – 300 ₽</td>
+                <td class="p-4">~1 500 – 3 000 ₽</td>
+                <td class="p-4 text-red-400">~4 500 – 9 000 ₽</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-white">Точность допродаж (Upsell чана/бани)</td>
+                <td class="p-4 text-brand-orange font-bold">96% строго по регламенту</td>
+                <td class="p-4">65% (забывает предложить)</td>
+                <td class="p-4">95%</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-white">Санкционная надежность</td>
+                <td class="p-4 text-emerald-400 font-bold">Полная доступность</td>
+                <td class="p-4 text-emerald-400">Полная доступность</td>
+                <td class="p-4 text-red-400">Риск отключения / проблемы с оплатой</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INTERACTIVE DEMO (SIMULATION) -->
+  <section id="demo" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-surface/30 border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">Пример работы</h2>
+        <h3 class="text-3xl font-extrabold text-white">Как агент общается с гостем турбазы «Бриз»</h3>
+        <p class="text-gray-400 text-sm mt-2">Реальный сценарий: ночной запрос в субботу в 23:45</p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl">
+        <div class="flex items-center justify-between pb-4 mb-6 border-b border-white/10 text-xs text-gray-400 font-mono">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="text-white font-semibold">Консьерж Бриз (ИИ)</span> • Онлайн
+          </div>
+          <span>Суббота, 23:45</span>
+        </div>
+
+        <div class="space-y-4 text-xs sm:text-sm">
+          <!-- Guest -->
+          <div class="flex justify-end">
+            <div class="bg-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%] text-white">
+              Здравствуйте! Хотим приехать в следующие выходные вдвоем, но у нас шпиц 3 кг. Есть свободные домики с красивым видом на горы?
+            </div>
+          </div>
+
+          <!-- AI -->
+          <div class="flex justify-start">
+            <div class="bg-brand-card border border-brand-orange/30 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] text-gray-200">
+              <p class="mb-2">
+                Здравствуйте! С радостью примем вас с питомцем 🐾 Мы dog-friendly, шпицу у нас точно понравится простор волжского берега!
+              </p>
+              <p class="mb-2">
+                Для двоих идеально подойдет двухэтажный коттедж <strong class="text-white">«Барн Хаус-70»</strong>: панорамные окна с прямым видом на Жигулевские горы, камин в гостиной, уютная спальня и собственная терраса с мангалом.
+              </p>
+              <div class="p-3 my-2 rounded-xl bg-black/40 border border-white/5 text-xs">
+                🔥 <strong class="text-brand-orange">Идеально для ноября:</strong> большинство пар бронируют к заезду горячий <strong class="text-white">чан Фурако</strong> под открытым небом (5 000 ₽ / 2 часа). Можем растопить его к вашему приезду в 18:00 с еловыми веточками и травяным волжским чаем?
+              </div>
+              <p>
+                Стоимость домика на выходные — от 8 000 ₽/сутки. Забронировать за вами Барн-70 на 24–26 ноября?
+              </p>
+            </div>
+          </div>
+
+          <!-- Guest -->
+          <div class="flex justify-end">
+            <div class="bg-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%] text-white">
+              Да, чан обязательно! Давайте ссылку на оплату.
+            </div>
+          </div>
+
+          <!-- AI -->
+          <div class="flex justify-start">
+            <div class="bg-brand-card border border-emerald-500/30 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] text-gray-200">
+              <p class="mb-2">
+                Отличный выбор! Сформировал бронь на Барн Хаус-70 + Чан Фурако на вечер заезда.
+              </p>
+              <a href="#" class="inline-block px-4 py-2 my-2 rounded-lg bg-emerald-500 text-black font-bold text-xs uppercase tracking-wider hover:bg-emerald-400 transition-colors">
+                Оплатить бронь через TravelLine →
+              </a>
+              <p class="text-xs text-gray-400">
+                После подтверждения пришлю точную схему зимнего проезда к турбазе и пароль от Wi-Fi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-gray-400">
+          <span>⚡ Время ответа ИИ: 1.4 секунды</span>
+          <span>💰 Допродажа чана: +5 000 ₽ к чеку</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. OFF-SEASON STRATEGY -->
+  <section id="offseason" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">Загрузка несезона</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Как привлекать гостей с ноября по апрель за копейки</h3>
+        <p class="text-gray-400 mt-4 text-sm sm:text-base">
+          В несезон на Волге нельзя продавать просто «домик». Мы продаем <strong class="text-white">эмоциональные ритуалы</strong> с помощью ИИ.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-3xl mb-4">♨️</div>
+          <h4 class="text-lg font-bold text-white mb-2">«Чан Фурако в мороз»</h4>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">
+            Главный вирусный оффер для соцсетей (VK Клипы, Reels). Горячая вода, пар, Жигулевские горы в снегу. ИИ генерирует серии постов и таргетирует рекламу на пары из Самары и Тольятти.
+          </p>
+          <span class="text-[11px] font-mono text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded">Пакет «Романтик + Чан»</span>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-3xl mb-4">💻</div>
+          <h4 class="text-lg font-bold text-white mb-2">«Workation / Офис у реки»</h4>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">
+            Заполнение пустых будней (пн–чт). У вас заявлен высокоскоростной Wi-Fi. Привлекаем IT-специалистов и удаленщиков спецтарифом: «4 будних дня по цене 2 выходных».
+          </p>
+          <span class="text-[11px] font-mono text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded">Заполнение будней на 40%+</span>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-3xl mb-4">📩</div>
+          <h4 class="text-lg font-bold text-white mb-2">Реактивация базы гостей</h4>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">
+            Те, кто отдыхал в «Бризе» летом, с радостью приедут согреться у камина. ИИ сегментирует базу и рассылает точечные персональные WhatsApp/Telegram-предложения без рекламного бюджета.
+          </p>
+          <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded">Конверсия до 12%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PRICING & TIERS (2 VARIANTS) -->
+  <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-surface/60 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">Стоимость внедрения</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Прозрачные тарифы под задачи базы отдыха</h3>
+        <p class="text-gray-400 mt-4 text-sm sm:text-base">
+          Фиксированный разовый платеж за сборку и настройку + комфортная ежемесячная поддержка дешевле стоимости 1 суток проживания в коттедже.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Tier 1: Optimal -->
+        <div class="glass-card glass-card-hover rounded-3xl p-8 flex flex-col justify-between border-white/10">
+          <div>
+            <div class="inline-block px-3 py-1 rounded-full bg-white/10 text-gray-300 font-mono text-xs uppercase mb-4">
+              Тариф 1
+            </div>
+            <h4 class="text-2xl font-black text-white mb-2">«Оптимальный Старт»</h4>
+            <p class="text-gray-400 text-xs mb-6">
+              Фокусное решение для мгновенного закрытия ночных потерь лидов и автоматизации консультаций во всех каналах.
+            </p>
+
+            <div class="mb-6 p-4 rounded-2xl bg-black/40 border border-white/5">
+              <div class="text-xs text-gray-400">Стоимость внедрения (разово):</div>
+              <div class="text-3xl font-extrabold text-white my-1">89 000 ₽</div>
+              <div class="text-xs text-brand-orange font-semibold mt-1">
+                Ежемесячная поддержка: 7 900 ₽ / мес
+              </div>
+              <div class="text-[10px] text-gray-500 mt-1">(включая сервер, токены DeepSeek, мониторинг)</div>
+            </div>
+
+            <div class="space-y-3 text-xs text-gray-300 mb-8">
+              <div class="font-bold text-white text-xs uppercase tracking-wider mb-2">Что входит:</div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span>Сбор и оцифровка <strong>Базы Знаний</strong> базы «Бриз» (Барн-70/130, правила, чан, баня, FAQ)</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span>Разработка <strong>AI-Harness</strong> на базе китайской модели DeepSeek V3 (защита от ошибок, Tone of Voice)</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span>Подключение <strong>3 каналов</strong>: Виджет на сайт (Tilda) + Telegram-бот + Чат ВКонтакте</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span><strong>Модуль отзывов:</strong> ИИ-генератор ответов для Яндекс.Карт и 2ГИС</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span>Уведомления администратору в Telegram о готовых бронях</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#cta" class="w-full text-center py-3.5 px-6 rounded-xl font-bold text-xs bg-white/10 hover:bg-white/20 text-white transition-all border border-white/15">
+            Выбрать «Оптимальный» →
+          </a>
+        </div>
+
+        <!-- Tier 2: Flagship -->
+        <div class="glass-card glass-card-hover rounded-3xl p-8 flex flex-col justify-between border-brand-orange/60 glow-orange relative">
+          <div class="absolute -top-3.5 right-8 px-4 py-1 bg-gradient-to-r from-brand-orange to-brand-amber text-black font-extrabold text-xs rounded-full uppercase tracking-wider shadow-lg">
+            Максимальный ROI
+          </div>
+          <div>
+            <div class="inline-block px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange font-mono text-xs uppercase mb-4">
+              Тариф 2
+            </div>
+            <h4 class="text-2xl font-black text-white mb-2">«Флагман / Полная автономия»</h4>
+            <p class="text-gray-400 text-xs mb-6">
+              Комплексная экосистема: от привлечения в несезон до роста чека на территории базы отдыха.
+            </p>
+
+            <div class="mb-6 p-4 rounded-2xl bg-black/40 border border-brand-orange/20">
+              <div class="text-xs text-gray-400">Стоимость внедрения (разово):</div>
+              <div class="text-3xl font-extrabold text-white my-1">149 000 ₽</div>
+              <div class="text-xs text-brand-orange font-semibold mt-1">
+                Ежемесячная поддержка: 9 900 ₽ / мес
+              </div>
+              <div class="text-[10px] text-gray-500 mt-1">(включая сервер, безлимитные токены, дообучение базы)</div>
+            </div>
+
+            <div class="space-y-3 text-xs text-gray-300 mb-8">
+              <div class="font-bold text-white text-xs uppercase tracking-wider mb-2">Все из «Оптимального» плюс:</div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span><strong>Реактиватор несезона:</strong> модуль ИИ-рассылок по базе летних гостей для загрузки будней</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span><strong>Цифровой On-site консьерж:</strong> гид по заселению (навигация, Wi-Fi, меню кафе, заказ дров/угля)</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span><strong>Автодопродажи на месте:</strong> допродажа чана Фурако, продления проживания и бани (+20% к чеку)</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-brand-orange font-bold">✔</span>
+                <span><strong>ИИ-аудит качества:</strong> суфлер администратора и контроль соблюдения скриптов живым персоналом</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#cta" class="w-full text-center py-3.5 px-6 rounded-xl font-bold text-xs bg-gradient-to-r from-brand-orange to-brand-amber text-black hover:opacity-90 transition-all shadow-lg shadow-brand-orange/20">
+            Выбрать «Флагман» →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. ROI CALCULATOR -->
+  <section id="roi" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">Экономика проекта</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">Окупаемость с 1-го месяца работы</h3>
+
+      <div class="glass-card rounded-3xl p-8 border border-white/10 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-center">
+          <div class="p-4 rounded-xl bg-white/5">
+            <div class="text-2xl font-black text-brand-orange mb-1">+2 брони</div>
+            <div class="text-xs text-gray-400">в несезон посреди недели</div>
+            <div class="text-sm font-bold text-white mt-2">+14 000 ₽</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5">
+            <div class="text-2xl font-black text-brand-orange mb-1">+4 чана</div>
+            <div class="text-xs text-gray-400">допродажи Фурако через ИИ</div>
+            <div class="text-sm font-bold text-white mt-2">+20 000 ₽</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5">
+            <div class="text-2xl font-black text-emerald-400 mb-1">+2 ночных гостя</div>
+            <div class="text-xs text-gray-400">спасенных от ухода ночью</div>
+            <div class="text-sm font-bold text-white mt-2">+16 000 ₽</div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-r from-brand-orange/20 to-brand-amber/10 border border-brand-orange/30">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div class="text-lg font-bold text-white">Дополнительная выручка турбазы: ~50 000 ₽ / мес</div>
+              <div class="text-xs text-gray-300 mt-1">При расходах на поддержку всего 7 900 – 9 900 ₽ / мес.</div>
+            </div>
+            <div class="text-right">
+              <span class="inline-block px-4 py-2 rounded-xl bg-emerald-500 text-black font-extrabold text-xs uppercase tracking-wider">
+                ROI от 400%
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. ROADMAP (14 DAYS) -->
+  <section id="roadmap" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-surface/50 border-t border-white/5">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">План запуска</h2>
+        <h3 class="text-3xl font-extrabold text-white">14 дней от договора до первого диалога</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+          <div class="text-brand-orange font-mono font-bold text-xs mb-2">ДНИ 1–3</div>
+          <h4 class="text-white font-bold text-sm mb-2">Оцифровка базы</h4>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Интервью с управляющим, сбор всех цен, фото, правил dog-friendly, регламентов чанов и меню.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+          <div class="text-brand-orange font-mono font-bold text-xs mb-2">ДНИ 4–7</div>
+          <h4 class="text-white font-bold text-sm mb-2">Сборка Харнесса</h4>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Подключение DeepSeek V3, настройка ролевой модели, скриптов допродажи чана и защиты от выдумок.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+          <div class="text-brand-orange font-mono font-bold text-xs mb-2">ДНИ 8–11</div>
+          <h4 class="text-white font-bold text-sm mb-2">Интеграция каналов</h4>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Установка виджета на Tilda (briz.club), запуск бота в Telegram и ВКонтакте, интеграция карт.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+          <div class="text-brand-orange font-mono font-bold text-xs mb-2">ДНИ 12–14</div>
+          <h4 class="text-white font-bold text-sm mb-2">Тест и Боевой старт</h4>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Сквозное тестирование сценариев, обучение администраторов и запуск в боевой режим.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CTA SECTION -->
+  <section id="cta" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="text-3xl sm:text-5xl font-black text-white mb-6">
+        Готовы автоматизировать продажи <br />
+        <span class="text-gradient-orange">базы отдыха «Бриз»?</span>
+      </h2>
+      <p class="text-gray-400 text-base max-w-2xl mx-auto mb-10">
+        Давайте проведем короткую 20-минутную демонстрацию прототипа и обсудим запуск пилотного контура.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://t.me/" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-brand-orange to-brand-amber text-black hover:opacity-95 transition-all shadow-xl shadow-brand-orange/20">
+          Написать в Telegram →
+        </a>
+        <a href="tel:+79372014444" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm bg-white/5 border border-white/15 text-white hover:bg-white/10 transition-all">
+          Обсудить по телефону
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
